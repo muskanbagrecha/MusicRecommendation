@@ -4,16 +4,47 @@ import { useState } from "react";
 
 const musicdata = {
   Rock: [
-    { name: "Beatles", rating: "5/5" },
-    { name: "Queen", rating: "5/5" }
+    {
+      name: "Beatles",
+      desc: "They dont require any description.",
+      rating: "5/5"
+    },
+    {
+      name: "Queen",
+      desc: "The legacy of Freddy Mercury continues till date.",
+      rating: "5/5"
+    },
+    {
+      name: "The Local Train",
+      desc: "Every college student's favourite.",
+      rating: "4/5"
+    }
   ],
   Indie: [
-    { name: "Prateek Kuhad", rating: "4.5/5" },
-    { name: "Raghav Meatlle", rating: "4/5" }
+    {
+      name: "Prateek Kuhad",
+      desc: "This Indian-origin creates some of the best songs.",
+      rating: "4.5/5"
+    },
+    {
+      name: "Raghav Meatlle",
+      desc: "A hidden and underrated gem.",
+      rating: "4/5"
+    },
+    { name: "Tame Impala", desc: "Makes you trip", rating: "4.5/5" }
   ],
   Bollywood: [
-    { name: "Shreya Goshal", rating: "4/5" },
-    { name: "Arijit Singh", rating: "4.5/5" }
+    {
+      name: "Shreya Goshal",
+      desc: "One of the best singers of the country.",
+      rating: "4/5"
+    },
+    { name: "Arijit Singh", desc: "Naam toh suna hi hoga.", rating: "4/5" },
+    {
+      name: "Sonu Nigam",
+      desc: "His songs are close to my heart.",
+      rating: "4.5/5"
+    }
   ]
 };
 
@@ -27,8 +58,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>
-        {" "}
-        <span style={{ color: "#66BFBF" }}>music</span>
+        good<span style={{ color: "#66BFBF" }}>music</span>
       </h1>
       <p style={{ fontSize: "18px" }}>Select a genre to get started!</p>
       <div>
@@ -65,8 +95,18 @@ export default function App() {
                 border: "2px solid #66BFBF"
               }}
             >
-              <div style={{ fontSize: "larger" }}> {item.name} </div>
-              <div style={{ fontSize: "smaller" }}> {item.rating} </div>
+              <div style={{ fontSize: "larger", padding: "5px" }}>
+                {" "}
+                {item.name}{" "}
+              </div>
+              <div style={{ fontSize: "smaller", padding: "5px" }}>
+                {" "}
+                {item.desc}{" "}
+              </div>
+              <div style={{ fontSize: "smaller", padding: "5px" }}>
+                {" "}
+                {item.rating}{" "}
+              </div>
             </li>
           ))}
         </ul>
